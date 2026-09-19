@@ -1,0 +1,16 @@
+[package]
+name = "beacon"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Interactive cybercrime reporting guide for victims: preserve evidence first, then report."
+repository = ""
+
+[[bin]]
+name = "beacon"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+chrono = "0.4"
+anyhow = "1"
