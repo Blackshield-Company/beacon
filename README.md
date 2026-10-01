@@ -110,4 +110,5 @@ Dependencies: `clap` (derive), `chrono`, `anyhow`. That's it.
 
 Apache-2.0 — see [LICENSE](LICENSE). Copyright synth (synthalorian).
 
-Made by synth with blackclaw
+
+Part of [Blackshield Company](https://github.com/Blackshield-Company).
