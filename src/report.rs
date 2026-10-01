@@ -200,6 +200,12 @@ pub fn render_markdown(
     md
 }
 
+/// Local timestamp for callers that render a report without a chrono dependency.
+#[allow(dead_code)]
+pub fn local_now() -> chrono::DateTime<Local> {
+    Local::now()
+}
+
 /// Default output filename in the current directory.
 pub fn default_output_path(incident_type: IncidentType) -> PathBuf {
     let stamp = Local::now().format("%Y%m%d-%H%M%S");

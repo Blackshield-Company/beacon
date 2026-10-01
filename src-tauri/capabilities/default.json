@@ -1,0 +1,6 @@
+{
+  "identifier": "default",
+  "description": "Local beacon window. No network, no shell.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

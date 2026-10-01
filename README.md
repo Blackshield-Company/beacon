@@ -106,6 +106,20 @@ cargo test
 
 Dependencies: `clap` (derive), `chrono`, `anyhow`. That's it.
 
+## Desktop
+
+The window writes a local markdown file and does not submit anything.
+
+```sh
+cargo build --manifest-path src-tauri/Cargo.toml
+./src-tauri/target/debug/beacon-desktop
+```
+
+## Roadmap
+
+- [x] Window (`beacon-desktop`)
+- [ ] Windows and Mac release builds (workflow is in, run it when the suite is finished)
+
 ## License
 
 Apache-2.0 — see [LICENSE](LICENSE). Copyright synth (synthalorian).

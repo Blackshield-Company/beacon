@@ -48,8 +48,21 @@ impl IncidentType {
         }
     }
 
-    /// All incident types. Used by tests to guarantee per-type coverage.
-    #[cfg(test)]
+    /// Inverse of [`slug`]. Unknown and empty strings are `None`.
+    pub fn from_slug(slug: &str) -> Option<Self> {
+        match slug {
+            "online-fraud" => Some(Self::OnlineFraud),
+            "identity-theft" => Some(Self::IdentityTheft),
+            "cyberstalking" => Some(Self::Cyberstalking),
+            "phishing" => Some(Self::Phishing),
+            "ransomware" => Some(Self::Ransomware),
+            "sextortion" => Some(Self::Sextortion),
+            "csam" => Some(Self::Csam),
+            _ => None,
+        }
+    }
+
+    /// All incident types, in display order.
     pub fn all() -> [IncidentType; 7] {
         [
             IncidentType::OnlineFraud,
@@ -306,5 +319,15 @@ mod tests {
             let s = t.slug();
             assert!(s.chars().all(|c| c.is_ascii_lowercase() || c == '-'));
         }
+    }
+
+    #[test]
+    fn from_slug_round_trips_known_slugs_and_rejects_the_rest() {
+        for t in IncidentType::all() {
+            assert_eq!(IncidentType::from_slug(t.slug()), Some(t));
+        }
+        assert_eq!(IncidentType::from_slug(""), None);
+        assert_eq!(IncidentType::from_slug("csam "), None);
+        assert_eq!(IncidentType::from_slug("fraud"), None);
     }
 }

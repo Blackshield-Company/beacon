@@ -6,6 +6,10 @@ license = "Apache-2.0"
 description = "Interactive cybercrime reporting guide for victims: preserve evidence first, then report."
 repository = ""
 
+[lib]
+name = "beacon"
+path = "src/lib.rs"
+
 [[bin]]
 name = "beacon"
 path = "src/main.rs"

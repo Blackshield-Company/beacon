@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Beacon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Beacon</h1>
+    <p class="disclaimer">Not legal advice. Does not file the report for you. Nothing leaves the machine.</p>
+  </header>
+  <p id="error" class="error" hidden></p>
+  <main>
+    <section class="board">
+      <h2>Type</h2>
+      <select id="type"></select>
+      <h2>Resources</h2>
+      <pre id="resources" class="summary"></pre>
+    </section>
+    <section class="detail">
+      <h2>Checklist</h2>
+      <ol id="checklist"></ol>
+      <p id="csam-note" class="error" hidden>do not attach or describe the material itself; report the location only.</p>
+      <form id="report">
+        <h2>Report</h2>
+        <label class="hint" for="incident_dates">When it happened</label>
+        <input id="incident_dates" name="incident_dates" spellcheck="false" />
+        <label class="hint" for="description">What happened</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+        <label class="hint" for="amount_lost">Money lost</label>
+        <input id="amount_lost" name="amount_lost" spellcheck="false" />
+        <label class="hint" for="platforms">Platforms / websites / apps</label>
+        <input id="platforms" name="platforms" spellcheck="false" />
+        <label class="hint" for="accounts_involved">Your accounts involved</label>
+        <input id="accounts_involved" name="accounts_involved" spellcheck="false" />
+        <label class="hint" for="suspect_identifiers">Suspect identifiers</label>
+        <textarea id="suspect_identifiers" name="suspect_identifiers" rows="2" spellcheck="false"></textarea>
+        <label class="hint" for="evidence_preserved">Evidence preserved</label>
+        <textarea id="evidence_preserved" name="evidence_preserved" rows="2"></textarea>
+        <label class="hint" for="contact_info">Contact info for investigators</label>
+        <input id="contact_info" name="contact_info" spellcheck="false" />
+        <label class="hint" for="existing_reports">Existing report or case numbers</label>
+        <input id="existing_reports" name="existing_reports" spellcheck="false" />
+        <label class="hint" for="output_path">Output path (empty saves under app data)</label>
+        <input id="output_path" name="output_path" spellcheck="false" />
+        <button class="btn" type="submit">Save report</button>
+      </form>
+      <p id="saved" class="saved"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
