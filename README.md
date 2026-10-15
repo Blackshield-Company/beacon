@@ -1,3 +1,5 @@
+![beacon](.github/preview.png)
+
 # beacon
 
 An interactive, local-first cybercrime reporting guide for victims.
