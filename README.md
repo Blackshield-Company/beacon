@@ -127,4 +127,4 @@ cargo build --manifest-path src-tauri/Cargo.toml
 Apache-2.0 — see [LICENSE](LICENSE). Copyright synth (synthalorian).
 
 
-Part of [Blackshield Company](https://github.com/Blackshield-Company).
+Part of [Blackshield Company](https://github.com/synthalorian).
